@@ -9,15 +9,19 @@
 - Instalação do Bootstrap
 - Estrutura Básica de um Documento HTML com Bootstrap
 
-#### [Sistema de Linhas e Colunas](#sistema-de-linhas-e-colunas)
+#### [Bootstrap básico](#sistema-de-linhas-e-colunas)
 
-- Introdução ao Sistema de Linhas e Colunas
-- Layout Responsivo
-- Margin e Padding
+- Sistema de Linhas e Colunas
+- Responsividade
+- Espaçamentos
 - Tipografia
+- Cores
+- Display
+- Alinhamento
+- Ícones
 - Hands-on: Construção de Layout
 
-#### [Componentes Básicos](#componentes-básicos)
+#### [Componentes](#componentes-básicos)
 
 - Componentes Comuns
 - Criação de uma página completa
@@ -30,8 +34,6 @@
 - Desafio Final
 
 ## Introdução HTML Simples
-
-**Apresentação do Treinamento e Objetivos**
 
 - O que é o Bootstrap e por que utilizá-lo.
 - Principais funcionalidades e vantagens.
@@ -248,7 +250,7 @@ Titulos
 
 ![titulos](./assets/titulos.png)
 
-Uso de cores
+**Uso de cores**
 
 Cores padrões
 
@@ -316,14 +318,43 @@ exemplo, cores em background
 
 <button type="button" class="btn btn-link">Link</button>
 ```
-![alt text](image.png)
+![alt text](./assets/buttons.png)
+
+**Display**
+
+| Classe           | Descrição                                                                                                                                                    | Exemplo de Uso                          |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------- |
+| `d-inline`       | Exibe um elemento como um elemento de bloco inline, permitindo que outros elementos fiquem ao lado dele.                                                     | `<span class="d-inline">...</span>`     |
+| `d-inline-block` | Exibe um elemento como um elemento de bloco inline, mas com a capacidade de definir largura e altura.                                                        | `<div class="d-inline-block">...</div>` |
+| `d-block`        | Exibe um elemento como um elemento de bloco padrão, que ocupa toda a largura disponível e começa em uma nova linha.                                          | `<div class="d-block">...</div>`        |
+| `d-flex`         | Transforma um elemento em um container flexível, permitindo o uso de flexbox para controle de layout flexível.                                               | `<div class="d-flex">...</div>`         |
+| `d-grid`         | Transforma um elemento em um container de grid, permitindo o uso de grid CSS para layout.                                                                    | `<div class="d-grid">...</div>`         |
+| `d-table`        | Exibe um elemento como um elemento de tabela, similar ao `<table>`, mas usando CSS para controle de layout.                                                  | `<div class="d-table">...</div>`        |
+| `d-none`         | Oculta um elemento, removendo-o do fluxo do documento.                                                                                                       | `<div class="d-none">...</div>`         |
+| `d-*`            | Para outros valores de `*`, como `d-inline-flex`, `d-inline-table`, `d-table-cell`, etc., que combinam comportamentos para controlar a exibição do elemento. | `<div class="d-inline-flex">...</div>`  |
+
+**Alinhamento Vertial**
+
+| Método de Alinhamento Vertical | Descrição                                                                                         | Exemplo de Uso                                       |
+| ------------------------------ | ------------------------------------------------------------------------------------------------- | ---------------------------------------------------- |
+| `align-items-center`           | Alinha os itens verticalmente ao centro dentro de um container flex usando `d-flex`.              | `<div class="d-flex align-items-center">...</div>`   |
+| `align-middle`                 | Alinha um único item verticalmente ao centro dentro de um container flex usando `d-inline-block`. | `<div class="d-inline-block align-middle">...</div>` |
+
+**Ícones**
+
+[Documentaçao](https://icons.getbootstrap.com/)
+
+```html
+<i class="bi bi-bootstrap-fill"></i>
+```
+
+![alt text](./assets/icon.png)
 
 **Hands-on: Construção de Layout**
 
 - Exercício prático de construção de um layout utilizando o sistema de linhas e colunas.
   
-![desafio-1](./assets/desafio-1.png)
-https://getbootstrap.com/docs/5.3/examples/jumbotron/
+![desafio-1](./desafios/desafio-1.png)
 
 ## Componentes Básicos
 
