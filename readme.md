@@ -23,7 +23,7 @@
 
 #### [Componentes](#componentes-básicos)
 
-- Componentes Comuns
+- Componentes
 - Forms
 - Criação de uma página completa
 
@@ -31,7 +31,6 @@
 
 - Sass
 - Customização Avançada
-- Componentes Interativos
 - Desafio Final
 
 ## Introdução HTML Simples
@@ -357,9 +356,7 @@ exemplo, cores em background
   
 ![desafio-1](./desafios/desafio-1.png)
 
-## Componentes Básicos
-
-**Componentes Comuns**
+## Componentes
 
 Cards
   
@@ -576,34 +573,93 @@ Form Validation
 **Criação de uma Página Completa**
 
 - Exercício prático: construção de uma página web utilizando os componentes aprendidos.
+
 [Exemplo](https://getbootstrap.com/docs/5.3/examples/checkout/)
 
 ## Avançado
 
 **Sass**
+  
+Sintaxe e variaveis
 
-- Sintaxe
-- Aninhamento
-- Variáveis
-- Mixins e Extends
+- [Sintaxe](https://sass-lang.com/documentation/style-rules/#nesting)
+- [Variaveis](https://sass-lang.com/documentation/variables/)
+
+```scss
+$primary-color: #3498db;
+$font-stack: 'Helvetica, sans-serif';
+
+body {
+  color: $primary-color;
+  font-family: $font-stack;
+}
+
+a {
+  color: $primary-color;
+
+  &:hover {
+    color: darken($primary-color, 10%);
+  }
+}
+```
+
+Mixins e Extends
+
+- [Mixin](https://sass-lang.com/documentation/at-rules/mixin/)
+- [Extend](https://sass-lang.com/documentation/at-rules/extend/)
+
+```scss
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+.button {
+  @include border-radius(10px);
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: white;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-container {
+  @extend .flex;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+```
+
+Funções
+
+```scss
+@function px-to-rem($px, $base-font-size: 16px) {
+  @return $px / $base-font-size * 1rem;
+}
+
+.container {
+  width: px-to-rem(320px);
+  padding: px-to-rem(16px);
+  font-size: px-to-rem(14px);
+  background-color: $primary-color;
+}
+```
 
 **Customização Avançada**
 
-- Utilização de Sass para customização.
-- Variáveis e temas.
-  
-**Componentes Interativos com javascript**
+[Documentação da instalação com Vite](https://getbootstrap.com/docs/5.3/getting-started/vite/)
 
-- Carousels, Modals, Tabs, Tooltip.
-- Introdução ao JavaScript do Bootstrap.
+[Github do bootstrap](https://github.com/twbs/bootstrap)
+
+[Variaveis](https://github.com/twbs/bootstrap/blob/main/scss/_variables.scss)
+
+![scss-cores](./assets/scss-custom-colors.gif)
 
 **Hands-on: Desafio Final**
 
 - [Desafio](https://696871.commercesuite.com.br/checkout/cart/gift-wraps?store_id=696871&session_id=0hs9vn9ah97vjps4uut8liksq3&id_items=4182)
-
-## Conclusão
-
- **Resumo e Perguntas**
-
-- Recapitulação dos principais pontos abordados.
-- Sessão de perguntas e respostas.
