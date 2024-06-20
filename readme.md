@@ -21,7 +21,7 @@
 - Ícones
 - Hands-on: Construção de Layout
 
-#### [Componentes](#componentes-básicos)
+#### [Componentes](#componentes)
 
 - Componentes
 - Forms
@@ -33,22 +33,30 @@
 - Customização Avançada
 - Desafio Final
 
-## Introdução HTML Simples
+## Introdução
 
-- O que é o Bootstrap e por que utilizá-lo.
-- Principais funcionalidades e vantagens.
+O Bootstrap facilita a criação de sites responsivos e esteticamente agradáveis com menos esforço e tempo.
+
+O Bootstrap é um framework CSS de código aberto desenvolvido pelo Twitter. Ele fornece uma coleção de ferramentas e componentes pré-desenhados que ajudam a construir interfaces de usuário de forma rápida e eficiente
+
+Por que aprender Bootstrap?
+
+- Facilidade de uso
+- Responsivida
+- Componentes
 
 ## Configuração e Estrutura Básica
 
 **Instalação do Bootstrap**
 
-- CDN vs. instalação local.
-- Inclusão do Bootstrap em um projeto HTML.
+**CDN**: Oferece melhor desempenho e fácil integração com cache e distribuição global, mas depende de servidores externos.
+
+**Instalação Local**: Proporciona controle total e segurança dos arquivos com a capacidade de trabalhar offline, mas requer manutenção manual das atualizações
 
 **Estrutura Básica de um Documento HTML com Bootstrap**
 
 - Estrutura básica do HTML5.
-- Importação correta do CSS e JS do Bootstrap.
+- Importação correta do CSS e JS do Bootstrap (ordem de carregamento).
 
 ## Sistema de Linhas e Colunas
 
@@ -58,7 +66,6 @@ Container padrão
 
    ```html
    <div class="container">
-      seu conteúdo aqui
    </div>
    ```
 
@@ -105,27 +112,22 @@ As classes de colunas seguem o formato col-{tamanho}, onde {tamanho} pode ser um
 ```html
 <div class="container text-center">
   <div class="row">
-    <!-- Primeira coluna que ocupa uma fração igual do espaço disponível -->
     <div class="col">
-      1 of 2
+      Primeira coluna que ocupa uma fração igual do espaço disponível
     </div>
-    <!-- Segunda coluna que ocupa uma fração igual do espaço disponível -->
     <div class="col">
-      2 of 2
+      Segunda coluna que ocupa uma fração igual do espaço disponível
     </div>
   </div>
   <div class="row">
-    <!-- Primeira coluna que ocupa uma fração igual do espaço disponível -->
     <div class="col">
-      1 of 3
+     Primeira coluna que ocupa uma fração igual do espaço disponível
     </div>
-    <!-- Segunda coluna que ocupa uma fração igual do espaço disponível -->
     <div class="col">
-      2 of 3
+      Segunda coluna que ocupa uma fração igual do espaço disponível
     </div>
-    <!-- Terceira coluna que ocupa uma fração igual do espaço disponível -->
     <div class="col">
-      3 of 3
+      Terceira coluna que ocupa uma fração igual do espaço disponível
     </div>
   </div>
 </div>
@@ -138,21 +140,15 @@ exemplo 2
 ```html
 <div class="container text-center">
   <div class="row">
-    <!-- Primeira coluna que ocupa uma fração igual do espaço disponível -->
-    <div class="col">col</div>
-    <!-- Segunda coluna que ocupa uma fração igual do espaço disponível -->
-    <div class="col">col</div>
-    <!-- Terceira coluna que ocupa uma fração igual do espaço disponível -->
-    <div class="col">col</div>
-    <!-- Quarta coluna que ocupa uma fração igual do espaço disponível -->
-    <div class="col">col</div>
+    <div class="col">Primeira coluna que ocupa uma fração igual do espaço disponível</div>
+    <div class="col">Segunda coluna que ocupa uma fração igual do espaço disponível</div>
+    <div class="col">Terceira coluna que ocupa uma fração igual do espaço disponível</div>
+    <div class="col">Quarta coluna que ocupa uma fração igual do espaço disponível</div>
   </div>
 
   <div class="row">
-    <!-- Coluna que ocupa 8/12 do espaço disponível (66.67%) -->
-    <div class="col-8">col-8</div>
-    <!-- Coluna que ocupa 4/12 do espaço disponível (33.33%) -->
-    <div class="col-4">col-4</div>
+    <div class="col-8">Coluna que ocupa 8/12 do espaço disponível</div>
+    <div class="col-4">Coluna que ocupa 4/12 do espaço disponível (33.33%)</div>
   </div>
 </div>
 
@@ -199,23 +195,12 @@ Você pode adicionar mais tamanhos adicionando entradas à variável de mapa `$s
 ### Exemplo de Uso
 
 ```html
-<!-- Margem inferior de 3 -->
-<div class="mb-3"></div>
-
-<!-- Padding em todos os lados de 1 -->
-<div class="p-1"></div>
-
-<!-- Margem superior e inferior (eixo y) de 4 -->
-<div class="my-4"></div>
-
-<!-- Margem direita e esquerda (eixo x) de 4 -->
-<div class="mx-4"></div>
-
-<!-- Padding à esquerda (start) de 2 -->
-<div class="ps-2"></div>
-
-<!-- Margem automática à esquerda e direita -->
-<div class="mx-auto"></div>
+<div class="mb-3">Margem inferior de 3</div>
+<div class="p-1">Padding em todos os lados de 1</div>
+<div class="my-4">Margem superior e inferior (eixo y) de 4</div>
+<div class="mx-4">Margem direita e esquerda (eixo x) de 4</div>
+<div class="ps-2">Padding à esquerda (start) de 2</div>
+<div class="mx-auto">Margem automática à esquerda e direita</div>
 ```
 
 **Tipografia**
@@ -240,12 +225,14 @@ Uso de fontes
 Titulos
 
 ```html
-<h1>h1. Bootstrap heading</h1>
-<h2>h2. Bootstrap heading</h2>
-<h3>h3. Bootstrap heading</h3>
-<h4>h4. Bootstrap heading</h4>
-<h5>h5. Bootstrap heading</h5>
-<h6>h6. Bootstrap heading</h6>
+<div class="container text-center text-warning mt-4 d-flex flex-column-reverse">
+    <h1>h1. Bootstrap heading</h1>
+    <h2>h2. Bootstrap heading</h2>
+    <h3>h3. Bootstrap heading</h3>
+    <h4>h4. Bootstrap heading</h4>
+    <h5>h5. Bootstrap heading</h5>
+    <h6>h6. Bootstrap heading</h6>
+</div>
 ```
 
 ![titulos](./assets/titulos.png)
@@ -333,12 +320,37 @@ exemplo, cores em background
 | `d-none`         | Oculta um elemento, removendo-o do fluxo do documento.                                                                                                       | `<div class="d-none">...</div>`         |
 | `d-*`            | Para outros valores de `*`, como `d-inline-flex`, `d-inline-table`, `d-table-cell`, etc., que combinam comportamentos para controlar a exibição do elemento. | `<div class="d-inline-flex">...</div>`  |
 
-**Alinhamento Vertial**
+**Alinhamento**
 
-| Método de Alinhamento Vertical | Descrição                                                                                         | Exemplo de Uso                                       |
-| ------------------------------ | ------------------------------------------------------------------------------------------------- | ---------------------------------------------------- |
-| `align-items-center`           | Alinha os itens verticalmente ao centro dentro de um container flex usando `d-flex`.              | `<div class="d-flex align-items-center">...</div>`   |
-| `align-middle`                 | Alinha um único item verticalmente ao centro dentro de um container flex usando `d-inline-block`. | `<div class="d-inline-block align-middle">...</div>` |
+Centralizando Texto
+
+```html
+<div class="text-center">
+  Este texto está centralizado.
+</div>
+```
+
+Centralizando Blocos
+
+```html
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 mx-auto">
+      Este bloco está centralizado horizontalmente.
+    </div>
+  </div>
+</div>
+```
+
+Centralizando Horizontalmente e Verticalmente:
+
+```html
+<div class="d-flex justify-content-center align-items-center" style="height: 100vh;">
+  <div class="text-center">
+    Este bloco está centralizado horizontalmente e verticalmente.
+  </div>
+</div>
+```
 
 **Ícones**
 
@@ -361,14 +373,18 @@ exemplo, cores em background
 Cards
   
 ```html
-<div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
+    <div class="card p-2" style="width: 300px;">
+        <div class="d-flex justify-content-center">
+            <img src="https://www.gsuplementos.com.br/upload/produto/layout/185/image01-interna.webp"
+                class="card-img-top" style="width: 120px;">
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">WHEY PROTEIN CONCENTRADO (1KG)</h5>
+            <p class="card-text">Whey protein Growth fornece proteínas para quem deseja hipertrofia e definição
+                muscular.</p>
+            <a href="#" class="btn btn-primary">Comprar</a>
+        </div>
+    </div>
 ```
 ![alt text](./assets/card.png)
 
@@ -574,7 +590,7 @@ Form Validation
 
 - Exercício prático: construção de uma página web utilizando os componentes aprendidos.
 
-[Exemplo](https://getbootstrap.com/docs/5.3/examples/checkout/)
+![Exemplo](./desafios/desafio-2.png)
 
 ## Avançado
 
@@ -653,6 +669,7 @@ Funções
 **Customização Avançada**
 
 [Documentação da instalação com Vite](https://getbootstrap.com/docs/5.3/getting-started/vite/)
+[codesanbox](https://codesandbox.io/s/hopeful-leftpad-5r4wzd?file=/src/scss/styles.scss:3-117)
 
 [Github do bootstrap](https://github.com/twbs/bootstrap)
 
@@ -662,4 +679,4 @@ Funções
 
 **Hands-on: Desafio Final**
 
-- [Desafio](https://696871.commercesuite.com.br/checkout/cart/gift-wraps?store_id=696871&session_id=0hs9vn9ah97vjps4uut8liksq3&id_items=4182)
+![Desafio](./desafios/desafio-tray.png)
