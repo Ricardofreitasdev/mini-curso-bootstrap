@@ -1,15 +1,15 @@
 # Mini Curso de Bootstrap
 
-#### [Introdução HTML Simples](#introdução-html-simples)
+#### Introdução
 
 - Apresentação do Treinamento e Objetivos
 
-#### [Configuração e Estrutura Básica](#configuração-e-estrutura-básica)
+#### Configuração e Estrutura Básica
 
 - Instalação do Bootstrap
 - Estrutura Básica de um Documento HTML com Bootstrap
 
-#### [Bootstrap básico](#sistema-de-linhas-e-colunas)
+#### Bootstrap básico
 
 - Sistema de Linhas e Colunas
 - Responsividade
@@ -21,13 +21,13 @@
 - Ícones
 - Hands-on: Construção de Layout
 
-#### [Componentes](#componentes)
+#### Componentes
 
 - Componentes
 - Forms
 - Criação de uma página completa
 
-#### [Bootstrap Avançado](#avançado)
+#### Bootstrap Avançado
 
 - Sass
 - Customização Avançada
@@ -42,7 +42,7 @@ O Bootstrap é um framework CSS de código aberto desenvolvido pelo Twitter. Ele
 Por que aprender Bootstrap?
 
 - Facilidade de uso
-- Responsivida
+- Responsividade
 - Componentes
 
 ## Configuração e Estrutura Básica
