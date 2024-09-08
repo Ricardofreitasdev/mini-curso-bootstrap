@@ -1,9 +1,5 @@
 # Mini Curso de Bootstrap
 
-#### Introdução
-
-- Apresentação do Treinamento e Objetivos
-
 #### Configuração e Estrutura Básica
 
 - Instalação do Bootstrap
@@ -37,7 +33,7 @@
 
 O Bootstrap facilita a criação de sites responsivos e esteticamente agradáveis com menos esforço e tempo.
 
-O Bootstrap é um framework CSS de código aberto desenvolvido pelo Twitter. Ele fornece uma coleção de ferramentas e componentes pré-desenhados que ajudam a construir interfaces de usuário de forma rápida e eficiente
+O Bootstrap é um framework CSS de código aberto desenvolvido pelo [Twitter](https://github.com/twbs/bootstrap/tree/v1.0.0). Ele fornece uma coleção de ferramentas e componentes pré-desenhados que ajudam a construir interfaces de usuário de forma rápida e eficiente
 
 Por que aprender Bootstrap?
 
@@ -57,6 +53,113 @@ Por que aprender Bootstrap?
 
 - Estrutura básica do HTML5.
 - Importação correta do CSS e JS do Bootstrap (ordem de carregamento).
+
+  
+### Ordem de Carregamento e Prioridade do CSS
+
+A ordem de carregamento e a prioridade do CSS determinam quais estilos serão aplicados quando houver conflitos. Aqui está como o navegador lida com diferentes tipos de CSS:
+
+#### 1. **CSS do Navegador (Estilos Padrão)**
+ - Todo navegador aplica um estilo padrão aos elementos HTML.
+ - Esses estilos fornecem uma base para a página, como margens para o `<body>`, fontes, etc.
+
+#### 2. **CSS Externo (Arquivo CSS)**
+ - Arquivos CSS externos são incluídos com a tag `<link>` no `<head>` do documento HTML.
+ - São carregados de acordo com a ordem em que aparecem no HTML. O último arquivo pode sobrescrever as regras dos anteriores.
+
+  ```html
+  <link rel="stylesheet" href="styles.css">
+  ```
+
+#### 3. **CSS Interno (Tag `<style>` no HTML)**
+- Estilos declarados dentro da tag `<style>` no próprio documento HTML, geralmente no `<head>`, têm prioridade sobre o CSS externo.
+
+```html
+<style>
+  body { 
+    background-color: lightblue;
+  }
+</style>
+```
+
+#### 4. **CSS Inline (Atributo `style` nos elementos HTML)**
+- CSS inline é inserido diretamente no atributo `style` de um elemento HTML e tem mais prioridade do que o CSS externo e interno.
+
+```html
+<div style="color: red;">Texto em vermelho</div>
+```
+
+#### 5. **Estilos com `!important`**
+- Qualquer estilo (externo, interno ou inline) com a regra `!important` tem a maior prioridade e sobrescreve qualquer outro estilo, independentemente da origem.
+- Exemplo:
+```css
+p { color: blue !important; }
+```
+
+### Ordem de Prioridade (da menor para a maior)
+1. CSS padrão do navegador
+2. CSS externo (arquivos `.css`)
+3. CSS interno (`<style>` no HTML)
+4. CSS inline (`style` nos elementos)
+5. Estilos com `!important` (independentemente da origem)
+
+Essa hierarquia garante que o estilo mais próximo do elemento (como inline) tenha mais peso, mas `!important` pode sobrepor qualquer regra, se necessário.
+
+## Entendo os Modificadores Bootstrap
+
+Imagine que você tem uma **camisa** básica e deseja personalizá-la com diferentes características.Os **modificadores** são usados para adicionar ou alterar essas características, e eles são representados por sufixos com um traço (`-`).
+
+#### 1. Camisa Básica
+
+classe base
+
+```css
+.camisa {
+  cor: "branca";
+  tamanho: "Médio"
+}
+```
+```html
+<div class="camisa">
+  Camisa Básica
+</div>
+```
+
+#### 2. Camisa Vermelha
+
+(Vermelha, P)
+```css
+.camisa-vermelha {
+  cor: "vermelho" !important;
+}
+```
+```html
+<div class="camisa camisa-vermelha">
+  Camisa Vermelha
+</div>
+```
+
+#### 2. Camisa Azul Grande
+
+```css
+.camisa-azul {
+  cor: "azul" !important;
+}
+
+.camisa-tamanho {
+   tamanho: "Médio";
+}
+
+.camisa-tamanho-grande {
+   tamanho: "Grande" !important;
+}
+```
+(Azul, G)
+```html
+<div class="camisa camisa-azul camisa-tamanho-grande">
+  Camisa Azul Grande
+</div>
+```
 
 ## Sistema de Linhas e Colunas
 
@@ -596,30 +699,63 @@ Form Validation
 
 **Sass**
   
-Sintaxe e variaveis
+É uma ferramenta que estende as funcionalidades do CSS, permitindo que você escreva estilos de forma mais eficiente e organizada. Com o Sass, você pode usar recursos como variáveis, aninhamento de seletores, mixins (blocos de código reutilizáveis), herança, e operações matemáticas.
 
-- [Sintaxe](https://sass-lang.com/documentation/style-rules/#nesting)
+- [Aninhamento](https://sass-lang.com/documentation/style-rules/#nesting)
 - [Variaveis](https://sass-lang.com/documentation/variables/)
+  
+
+o Sass é frequentemente usado em conjunto com a metodologia BEM (Block Element Modifier), que ajuda a organizar e padronizar o CSS para facilitar a manutenção e escalabilidade de projetos. A combinação do Sass com BEM torna o código mais legível e modular.
+
+- [BEM (Block Element Modifier)](https://desenvolvimentoparaweb.com/css/bem/)
+  
+A estrutura BEM segue essa lógica de nomenclatura:
+
+- **Bloco**: Representa um componente independente da interface, como um botão, um menu, etc.
+- **Elemento**: É uma parte do bloco que cumpre uma função específica (usando dois underlines `__`).
+- **Modificador**: Altera a aparência ou comportamento de um bloco ou elemento (usando dois hífens `--`).
+
+exemplo:
+
+```html
+<div class="button button--primary">
+  <span class="button__text">Click me</span>
+</div>
+```
 
 ```scss
-$primary-color: #3498db;
-$font-stack: 'Helvetica, sans-serif';
+$border-color: #ccc;
+$bg-color: #f2f2f2;
 
-body {
-  color: $primary-color;
-  font-family: $font-stack;
-}
+.button {
+  padding: 10px 20px;
+  border: 1px solid $border-color;
+  cursor: pointer;
+  background-color: $bg-color;
 
-a {
-  color: $primary-color;
+  &__text {
+    font-size: 16px;
+    color: #333;
+  }
 
-  &:hover {
-    color: darken($primary-color, 10%);
+  &--primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: white;
+
+    &:hover {
+      background-color: #0056b3;
+    }
   }
 }
+
 ```
 
 Mixins e Extends
+
+Mixin: É um bloco de código reutilizável que pode incluir propriedades, valores e até parâmetros. Você pode "chamar" um mixin em diferentes seletores, passando parâmetros para personalizar os estilos.
+
+Extends: Permite herdar o conjunto de propriedades de outro seletor. Isso é útil quando vários seletores compartilham o mesmo estilo base.
 
 - [Mixin](https://sass-lang.com/documentation/at-rules/mixin/)
 - [Extend](https://sass-lang.com/documentation/at-rules/extend/)
@@ -653,6 +789,9 @@ Mixins e Extends
 
 Funções
 
+As funções são blocos de código que realizam cálculos ou transformações e retornam um valor, que pode ser usado nas propriedades de estilo. Elas são semelhantes às funções em linguagens de programação e permitem que você crie operações reutilizáveis, tornando o CSS mais dinâmico e fácil de manter.
+
+
 ```scss
 @function px-to-rem($px, $base-font-size: 16px) {
   @return $px / $base-font-size * 1rem;
@@ -664,7 +803,10 @@ Funções
   font-size: px-to-rem(14px);
   background-color: $primary-color;
 }
-```
+``` 
+Exemplo de como o Bootstrap monta o botão
+
+https://github.com/twbs/bootstrap/blob/v5.3.3/scss/_buttons.scss 
 
 **Customização Avançada**
 
@@ -679,4 +821,4 @@ Funções
 
 **Hands-on: Desafio Final**
 
-![Desafio](./desafios/desafio-tray.png)
+![[Desafio](https://www.futfanatics.com.br/checkout/cart/gift-wraps?store_id=311840&session_id=ciei0dgqqvj6r8irepcnit05m7&id_items=60507685)](./desafios/desafio-tray.png)
