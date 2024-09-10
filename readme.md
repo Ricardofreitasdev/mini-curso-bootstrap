@@ -105,7 +105,7 @@ p { color: blue !important; }
 
 Essa hierarquia garante que o estilo mais próximo do elemento (como inline) tenha mais peso, mas `!important` pode sobrepor qualquer regra, se necessário.
 
-## Entendo os Modificadores Bootstrap
+## Entendendo os Modificadores Bootstrap
 
 Imagine que você tem uma **camisa** básica e deseja personalizá-la com diferentes características.Os **modificadores** são usados para adicionar ou alterar essas características, e eles são representados por sufixos com um traço (`-`).
 
@@ -115,8 +115,11 @@ classe base
 
 ```css
 .camisa {
-  cor: "branca";
-  tamanho: "Médio"
+  background-color: white;
+  color: black;
+  font-size: 16px; /* Tamanho médio */
+  padding: 10px;
+  border: 1px solid #000;
 }
 ```
 ```html
@@ -130,7 +133,8 @@ classe base
 (Vermelha, P)
 ```css
 .camisa-vermelha {
-  cor: "vermelho" !important;
+  background-color: red;
+  color: white;
 }
 ```
 ```html
@@ -143,20 +147,17 @@ classe base
 
 ```css
 .camisa-azul {
-  cor: "azul" !important;
+  background-color: blue;
+  color: white;
 }
 
-.camisa-tamanho {
-   tamanho: "Médio";
-}
-
-.camisa-tamanho-grande {
-   tamanho: "Grande" !important;
+.camisa-grande {
+  font-size: 20px; /**Tamanho grande */
 }
 ```
 (Azul, G)
 ```html
-<div class="camisa camisa-azul camisa-tamanho-grande">
+<div class="camisa camisa-azul camisa-grande">
   Camisa Azul Grande
 </div>
 ```
@@ -167,10 +168,10 @@ classe base
 
 Container padrão
 
-   ```html
-   <div class="container">
-   </div>
-   ```
+```html
+<div class="container">
+</div>
+```
 
 Tipos de container
 
@@ -455,6 +456,32 @@ Centralizando Horizontalmente e Verticalmente:
 </div>
 ```
 
+**Bordas**
+
+Largura
+
+```html
+<span class="border border-1"></span>
+<span class="border border-2"></span>
+<span class="border border-3"></span>
+<span class="border border-4"></span>
+<span class="border border-5"></span>
+```
+![alt text](./assets/border.png)
+
+Cantos
+
+```html
+<img src="..." class="rounded-0" alt="...">
+<img src="..." class="rounded-1" alt="...">
+<img src="..." class="rounded-2" alt="...">
+<img src="..." class="rounded-3" alt="...">
+<img src="..." class="rounded-4" alt="...">
+<img src="..." class="rounded-5" alt="...">
+```
+
+![alt text](./assets/border-1.png)
+
 **Ícones**
 
 [Documentaçao](https://icons.getbootstrap.com/)
@@ -691,9 +718,7 @@ Form Validation
 
 **Criação de uma Página Completa**
 
-- Exercício prático: construção de uma página web utilizando os componentes aprendidos.
-
-![Exemplo](./desafios/desafio-2.png)
+![[Desafio](https://www.futfanatics.com.br/checkout/cart/gift-wraps?store_id=311840&session_id=ciei0dgqqvj6r8irepcnit05m7&id_items=60507685)](./desafios/desafio-tray.png)
 
 ## Avançado
 
@@ -819,6 +844,3 @@ https://github.com/twbs/bootstrap/blob/v5.3.3/scss/_buttons.scss
 
 ![scss-cores](./assets/scss-custom-colors.gif)
 
-**Hands-on: Desafio Final**
-
-![[Desafio](https://www.futfanatics.com.br/checkout/cart/gift-wraps?store_id=311840&session_id=ciei0dgqqvj6r8irepcnit05m7&id_items=60507685)](./desafios/desafio-tray.png)
