@@ -844,3 +844,7 @@ https://github.com/twbs/bootstrap/blob/v5.3.3/scss/_buttons.scss
 
 ![scss-cores](./assets/scss-custom-colors.gif)
 
+## Pesquisa de satisfação e certificado
+
+![qr-code Certificado](https://github.com/user-attachments/assets/9029810c-7221-447b-9744-a6c0526d525a)
+
