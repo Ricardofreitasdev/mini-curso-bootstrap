@@ -27,7 +27,6 @@
 
 - Sass
 - Customização Avançada
-- Desafio Final
 
 ## Introdução
 
@@ -836,13 +835,8 @@ https://github.com/twbs/bootstrap/blob/v5.3.3/scss/_buttons.scss
 **Customização Avançada**
 
 [Documentação da instalação com Vite](https://getbootstrap.com/docs/5.3/getting-started/vite/)
+
 [codesanbox](https://codesandbox.io/s/hopeful-leftpad-5r4wzd?file=/src/scss/styles.scss:3-117)
-
-[Github do bootstrap](https://github.com/twbs/bootstrap)
-
-[Variaveis](https://github.com/twbs/bootstrap/blob/main/scss/_variables.scss)
-
-![scss-cores](./assets/scss-custom-colors.gif)
 
 ## Pesquisa de satisfação e certificado
 
