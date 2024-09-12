@@ -838,7 +838,3 @@ https://github.com/twbs/bootstrap/blob/v5.3.3/scss/_buttons.scss
 
 [codesanbox](https://codesandbox.io/s/hopeful-leftpad-5r4wzd?file=/src/scss/styles.scss:3-117)
 
-## Pesquisa de satisfação e certificado
-
-![qr-code Certificado](https://github.com/user-attachments/assets/9029810c-7221-447b-9744-a6c0526d525a)
-
